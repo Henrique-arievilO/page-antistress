@@ -11,19 +11,3 @@ export default function App(){
       </>
   )
 }
-
-//Passo a passo para fazer a aplicação! 
-
-//Criar a pasta com o arquivo Home 
-//Criar a pasta com o arquivo Dogs 
-
-//Linkar as rotas 
-//Add a page de estilo 
-
-//Importar a api 
-
-//Fazer a função para onClick randômico 
-
-//Estilizar
-
-//Fazer o responsivo

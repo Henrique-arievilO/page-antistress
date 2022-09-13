@@ -1,16 +1,18 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Title, Image } from "./Style"
+import { Container, Title, Image, Figure } from "./Style"
 
 export default function Dogs(){
 
     const [dog, setDog] = useState()
 
+    const [status, setStatus] = useState(false)
+
     function getDogs(){
         axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
-        console.log(response.data.message)
         setDog(response.data.message)
+        setStatus(true)
         })
     }
 
@@ -21,7 +23,9 @@ export default function Dogs(){
             </Link>
             <Title>Are you stressed?</Title>
             <button onClick={()=>{getDogs()}}>Click to relax!</button>
-            <Image src={dog} alt=""/>
+            <Figure>
+                {status && <Image src={dog} alt=""/>}
+            </Figure>
         </Container>
     )
 }

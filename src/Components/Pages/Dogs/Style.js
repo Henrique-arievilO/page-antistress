@@ -19,10 +19,15 @@ export const Title = styled.h1`
     font-size: 3em;
     background: #7d688b;
 `
+export const Figure = styled.figure`
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+`
 export const Image = styled.img`
     width: 15rem;
     height: 15rem;
     margin: 0 auto;
     object-fit: contain;
-    /* filter: drop-shadow(2px 2px 4px #000); */
+    filter: drop-shadow(3px 3px 6px #000);
 `
